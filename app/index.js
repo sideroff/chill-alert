@@ -1,21 +1,18 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { Provider } from 'react-redux'
+import { View, Text } from 'react-native'
+
+import { TopLevelNavigator } from './components'
+import navigation from './services/navigation'
+
+import store from './store.js'
 
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Nativeееееее!</Text>
-      </View>
+      <Provider store={store}>
+        <TopLevelNavigator navigatio={navigationRef => navigation.initialize(navigationRef)} />
+      </Provider>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  }
-})
