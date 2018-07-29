@@ -1,6 +1,8 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 import { connect } from 'react-redux'
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
+
 
 import { testAction } from './../actions'
 
@@ -20,7 +22,8 @@ class Test extends React.Component {
   render() {
     return (
       <View>
-        <Text>Testссс</Text>
+        <Text>Testсadadadadсс</Text>
+        <Icon name='rocket' />
       </View>
     )
   }
